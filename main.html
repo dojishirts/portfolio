@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>portfolio</title>
+	
+	<style>
+		*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: calibri;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(244, 248, 221);
+}
+
+nav{
+	width: 100%;
+	height: 80px;
+	background:rgb(244, 248, 221);
+}
+label.logo{
+	font-size: 35px;
+	color: rgb(0, 0, 0);
+	margin: 0 150px;
+	line-height: 80px;
+}
+nav ul{
+	float: right;
+	list-style-type: none;
+	margin-right: 150px;
+}
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+}
+nav ul li a{
+	position: relative;
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	font-size: 25px;
+	text-transform: capitalize;
+	padding: 8px 20px;
+}
+nav ul li a:hover{
+	color: rgb(135, 135, 135);
+}
+nav ul li a:after{
+	content: "";
+	position: absolute;
+	background-color: rgb(135, 135, 135);
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -3px;
+	transition: 0.3s;
+}
+nav ul li a:hover:after{
+	width: 100%;
+}
+#checkbtn{
+	float: right;
+	line-height: 80px;
+	margin-right: 10px;
+	font-size: 30px;
+	color: rgb(0, 0, 0);
+	display: none;
+}
+#check{
+	display: none;
+}
+#check:checked ~ ul{
+	left: 0;
+}
+
+
+
+.about{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-top: 60px;
+
+}
+.pic{
+	display: flex;
+
+}
+.intro{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+	margin: 30px;
+}
+.intro1{
+	display: flex;
+	align-items: center;
+	
+	flex-direction: column;
+}
+.intro1 p{
+	color: rgb(135, 135, 135);
+	font-size: 25px;
+}
+.intro1 h1{
+	font-size: 70px;
+}
+.intro1 h2{
+	color: rgb(109, 108, 108);
+	font-size: 40px;
+}
+
+.intro2 img{
+	width: 50px;
+    height: 45px;
+	margin: 10px;
+}
+.aboutus{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 30px 125px 30px;
+}
+.aboutus .pi{
+	font-size: larger;
+	color: rgb(135, 135, 135);
+	margin: 10px;
+}
+.aboutus h1{
+	font-size: 50px;
+}
+.img1{
+	width: 350px;
+	border-radius: 25px;
+	margin-right: 50px;
+}
+.content{
+	display: flex;
+	align-items: center;
+	
+	margin-top: 20px;
+
+	
+}
+.subcon{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: row;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+.passage{
+	width: 600px;
+	color: black;
+	font-size: larger;
+}
+.subcon img{
+	width: 100px;
+}
+.subcon1{
+	background-color: rgb(112, 130, 56);
+	padding: 13px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	width: 250px;
+	border-radius: 25px;
+}
+.subcon h3{
+	color: whitesmoke;
+	font-size:x-large;
+}
+.subcon p{
+	color: whitesmoke;
+	
+}
+.subcon2{
+	background-color: rgb(112, 130, 56);
+	padding: 15px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	width: 250px;
+	border-radius: 25px;
+}
+.subcon1 img{
+	width: 60px;
+}
+.Garments{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.Garments .pi{
+	font-size: larger;
+	color: rgb(135, 135, 135);
+	margin: 10px;
+}
+.Garments h1{
+	font-size: 50px;
+}
+.proj1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+}
+.r1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 35px 50px;
+	border-radius: 25px;
+	background-color: rgb(112, 130, 56);
+	margin-right: 35px;
+}
+.proj1 img{
+	width: 350px;
+	border-radius: 30px;
+}
+.Garments h2{
+	font-size: 35px;
+	margin: 20px;
+}
+
+.proj2{
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 35px 50px;
+	border-radius: 25px;
+	background-color: rgb(112, 130, 56);
+	margin-right: 35px;
+}
+.proj2 img{
+	border-radius: 30px;
+}
+.contact{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 40px;
+}
+.contact .pi{
+	font-size: larger;
+	color: rgb(135, 135, 135);
+	margin: 10px;
+}
+.contact h1{
+	font-size: 50px;
+}
+.contact1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-style: solid;
+	border-color: rgb(135, 135, 135);
+	margin-top: 35px;
+	border-radius: 25px;
+}
+.subcontact{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+.subcontact1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	margin-right: 30px;
+}
+.subcontact h3{
+	font-size: 25px;
+	font-weight: 150;
+}
+.subcontact img{
+	width: 40px;
+	margin: 10px;
+}
+.footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	margin-top: 50px;
+	
+}
+.footer h2{
+	font-size: 30px;
+	font-weight: 300;
+	margin: 25px;
+}
+h4{
+	border-style: solid;
+	border-width: thin;
+	border-radius: 30px;
+	padding: 13px 40px;
+	border-color: aliceblue;
+	margin: 0 20px;
+}
+.visit{
+	border-style: solid;
+	border-radius: 30px;
+	padding: 13px 40px;
+	border-color: black;
+}
+.visits{
+	border-style: solid;
+	border-radius: 30px;
+	padding: 13px 40px;
+	border-color: black;
+	margin: 20px;
+}
+.contact p{
+	margin: 30px;
+	color: rgb(135, 135, 135);
+	font-size: larger;
+}
+.projbtn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+
+@media(max-width: 785px){
+	
+	label.logo{
+		margin:20px 60px;
+	}
+	#checkbtn{
+		display: block;
+		margin-right:30px;
+		
+	}
+	.about .pic {
+		margin-left: 10px;
+	}
+	.aboutus .pi{
+		margin-right: 0;
+	}
+	.aboutus h1{
+		width: 300px;
+		margin-left: 110px;
+	}
+	.content .img1{
+		margin-left: 50px;
+		width: 500px;
+	}
+	nav ul{
+		width: 40%;
+		height: 225px;
+		background: rgb(255, 255, 255);
+		position: fixed;
+		top:80px;
+		left: 100%;
+		margin-left: 45%;
+		transition: .5s;
+
+	}
+	nav ul li{
+		display: block;
+		text-align: center;
+		line-height:50px;
+		margin:15px;
+	}
+	.about{
+		flex-direction: column;
+	}
+	.content{
+		display: flex;
+		flex-direction: column;
+	}
+	.content1{
+		margin-top: 20px;
+	}
+	.passage{
+		text-align: center;
+		width: 500px;
+		font-size: 30px;
+	}
+	.proj1{
+		flex-direction: column;
+
+	}
+	.r1{
+		margin-bottom: 30px;
+	}
+	.proj2{
+		margin-top: 8px;
+	}
+	.proj2 img{
+		width: 350px;
+	}
+	
+	.Garments h4{
+		margin: 0 10px;
+	}
+	.subcon1{
+		width: 250px;
+		margin-right: 10px;
+	}
+	.subcon2{
+		width: 250px;
+	}
+	.intro1 h2{
+		font-size:xx-large;
+	}
+}
+@media(max-width: 400px){
+	nav{
+		width:400px;
+	}
+	label.logo{
+		width: 250px;
+		margin:20px 60px;
+		margin-right:10px;
+	}
+	
+	#checkbtn{
+		
+		
+	}
+	.about .pic {
+		margin-left: 85px;
+	}
+	.about .pic img{
+		width: 280px;
+	}
+	.aboutus .pi{
+		width: 200px;
+		margin-right: 0;
+	}
+	.aboutus h1{
+		width: 300px;
+		margin-left: 110px;
+	}
+	.aboutus .passage{
+		font-size: 15px;
+	}
+	.content .img1{
+		margin-left: 50px;
+		width: 275px;
+	}
+	nav ul{
+		width: 40%;
+		height: 225px;
+		background: rgb(255, 255, 255);
+		position: fixed;
+		top:80px;
+		left: 100%;
+		margin-left: 45%;
+		transition: .5s;
+
+	}
+	nav ul li{
+		display: block;
+		text-align: center;
+		line-height:50px;
+		margin:15px;
+	}
+	.about{
+		flex-direction: column;
+	}
+	.content{
+		display: flex;
+		flex-direction: column;
+	}
+	.content1{
+		margin-top: 20px;
+	}
+	.passage{
+		text-align: center;
+		width: 300px;
+		font-size: 20px;
+	
+	}
+	.proj1{
+		flex-direction: column;
+
+	}
+	.r1{
+		margin-bottom: 30px;
+	}
+	.proj2{
+		margin-top: 8px;
+	}
+	.proj2 img{
+		width: 350px;
+	}
+	
+	.Garments h4{
+		margin: 0 10px;
+	}
+	.subcon1{
+		width: 250px;
+		margin-right: 10px;
+		padding: 10px 20px;
+	}
+	.subcon2{
+		width: 250px;
+		margin-right: 10px;
+		padding: 10px 20px;
+	}
+	.content1 h3{
+		font-size: 15px;
+	}
+	.content p{
+		font-size: 9px;
+	}
+	.intro1 h2{
+		font-size:xx-large;
+	}
+	.intro{
+		width:400px;
+	}
+	.intro p{
+		margin-left: 90px;
+	}
+	.intro h1{
+		font-size: 40px;
+		margin-left: 90px;
+	}
+	.intro h2{
+		font-size: 25px;
+		margin-left: 90px;
+
+	}
+	.intro1 .visits{
+		margin-left: 90px;
+	}
+	.intro2{
+		margin-left: 90px;
+	}
+	.content1{
+		width: 300px;
+	}
+	.aboutus{
+		margin-left: 200px;
+	}
+	.aboutus .pi{
+		margin-left: 60px;
+	}
+	.Garments .pi{
+		margin-left: 90px;
+	}
+	.Garments h1{
+		margin-left: 90px;
+	}
+	.Garments img{
+		width: 250px;
+	}
+	.Garments .proj1{
+		margin-left: 110px;
+	}
+	.Garments .proj2{
+		margin-left: 110px;
+	}
+	.contact{
+		width: 320px;
+
+	}
+	.contact .pi{
+		margin-left: 328px;
+	}
+	.contact h1{
+		margin-left: 120px;
+		font-size: 30px;
+	}
+	.contact1{
+		margin-left: 110px;
+	}
+	.contact1 h3{
+		font-size: 20px;
+	}
+	.footer{
+		width: 320px;
+		margin-left: 100px;
+	}
+	.footer h2{
+		
+		font-size: 15px;
+	}
+	.contact p{
+		width:300px;
+		margin-left: 150px;
+		font-size: 13px;
+	}
+}
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+	<meta name="viewport" content="width=device-width,intial-scale=1.0">
+</head>
+<body>
+	
+	<nav>
+		<input type="checkbox" id="check" name="" value="">
+		<label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+		<label class="logo">Doji Shirt's</label>
+		<ul>
+			<li><a href="#aboutus">About</a></li>
+			<li><a href="#Garments">Garments</a></li>
+			<li><a href="#contact">Contact</a></li>
+			
+		</ul>
+		
+	</nav>
+	<section class="about">
+		<div class="pic">
+			<img src="https://i.ibb.co/n6Q3NQm/New-Project.png" width="400px" >
+		</div>
+		<div class="intro">
+			<div class="intro1">
+				<p>Hello, This is</p>
+				<h1>Team DOJI</h1>
+				<h2>Gets You to a New Trend</h2>
+				<h4 class="visits">Visit Site</h4>
+			</div>
+			<div class="intro2">
+				<img src="https://i.ibb.co/LRyhDmb/Instagram-removebg-preview.png" >
+				<img src="https://i.ibb.co/PzG51Jt/Whatsapp-Ios-Icon-removebg-preview-1.png" >
+				<img src="https://i.ibb.co/5Bmmd4h/Pinterest-Shopify-You-The-Buy-It-Button-Fulfillrite-modified.png" >
+			</div>
+		</div>
+	</section>
+	<section class="aboutus" id= "aboutus">
+		<p class="pi">Get To Know More</p>
+		<h1>About Us</h1>
+		<div class="content">
+			<img class="img1" src="https://i.ibb.co/nR4cgqC/download-2.png">
+			<div class="content1">
+				<div class="subcon">
+					<div class="subcon1">
+						<img src="https://i.ibb.co/hDYTChC/image-1-removebg-preview.png">
+						<h3>Gang Tee's</h3>
+						<p>Achieve your</p>
+						<p>Goals as a Gang</p>
+					</div>
+					<div class="subcon2">
+						<img src="https://i.ibb.co/yYYXbj0/hanger.png">
+						<h3>Style</h3>
+						<p>Enhancing your</p>
+						<p>way of confidence with us</p>
+					</div>
+				</div>
+				<p class="passage">Hello! We are Doji Fashions, established in 2023. Our mission is to refine your style and boost your confidence with
+				sophisticated, trendy outfits. We offer an array of stylish garments adorned with unique prints. At Doji, we elevate
+				your fashion sense by providing custom printing for bulk orders. We are dedicated to infusing your wardrobe with
+				positivity, fostering a meaningful connection with the community, and helping you achieve your goals in a distinctive
+				manner.</p>
+			</div>
+		</div>
+	</section>
+	<section class="Garments" id= "Garments">
+		<p class="pi">Get on with our</p>
+		<h1>Garments</h1>
+		<div class="proj1">
+			<div class="r1">
+				<img src="https://i.ibb.co/s6G96CY/2beff6ff-c696-4cf3-9f39-284509c40955.png">
+				<h2>project one</h2>
+				<div class="projbtn">
+					
+					<h4>VISIT NOW</h4>
+				</div>
+			</div>
+			<div class="r1">
+				<img src="https://i.ibb.co/2YvzSZv/luis-herreraaa.jpg">
+				<h2> project two</h2>
+				<div class="projbtn">
+					
+					<h4>VISIT NOW</h4>
+				</div>
+			</div>
+		</div>
+		<div class="proj2">
+			<img src="https://i.ibb.co/9HLC6J5/Untitled.png">
+			<h2>project three</h2>
+			<div class="projbtn">
+				<h4>VISIT NOW</h4>
+			</div>
+		</div>
+		<div class="proj1">
+			<div class="r1">
+				<img src="https://i.ibb.co/2YvzSZv/luis-herreraaa.jpg">
+				<h2>project four</h2>
+				<div class="projbtn">
+					
+					<h4>VISIT NOW</h4>
+				</div>
+			</div>
+			<div class="r1">
+				<img src="https://i.ibb.co/2YvzSZv/luis-herreraaa.jpg">
+				<h2>project five</h2>
+				<div class="projbtn">
+			
+					<h4>VISIT NOW</h4>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section class="contact" id="contact">
+		<p class="pi">Get in Touch</p>
+		<h1>Contact Us</h1>
+		<div class="contact1">
+			<div class="subcontact">
+				<div class="subcontact1">
+					<img src="https://i.ibb.co/PzG51Jt/Whatsapp-Ios-Icon-removebg-preview-1.png">
+					<h3>Click to Converse</h3>
+				</div>
+				<div class="subcontact1">
+					<img src="https://i.ibb.co/zJ4Khtt/download-removebg-preview.png">
+					<h3>Queries</h3>
+				</div>
+			</div>
+			<h4 class="visit">Visit Us</h4>
+		</div>
+		<div class="footer">
+			<h2>Privacy Policy</h2>
+			<h2>Ethics</h2>
+			<h2>Garments</h2>
+		</div>
+		<p class="copyright"></p>
+	</section>
+</body>
+</html>
